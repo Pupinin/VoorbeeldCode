@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "StudentOverview";
+}
+<img src="~/Content/images/pxl-logo.png" alt="PXL Logo" class="bannerlogo" />
+<div class="container-fluid">
+    <div class="row" id="overzicht">
+        <div class="col-md-offset-2 col-md-8">
+            <table id="studenttable" class="table table-bordered" data-toggle="table">
+                <thead>
+                    <tr class="header-row">
+                        <th scope="col">Name</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Studenten number</th>
+                        <th scope="col">MD5-hash</th>
+                        <th scope="col">Filename</th>
+                        <th scope="col">Time</th>
+                </thead>
+                <tbody id="inner"></tbody>
+            </table>
+            <form class="form-inline" action="/api/Export" method="get">
+                <label class="btn btn-default btn-file">
+                    Export exams<input type="submit" class="buttons" style="display: none;" />
+                </label>
+                <input type="submit" class="buttons" id="logout" value="logout" />
+            </form>
+        </div>
+    </div>
+
+    <div class="row" id="aanmelden">
+        <div class="col-md-offset-2 col-md-4">
+            <main>
+                <h2>Login</h2>
+                <br />
+                <label>Email</label>
+                <br />
+                <input id="LoginEmail" name="LoginEmail">
+                <br />
+                <label>Password</label>
+                <br />
+                <input id="LoginPassword" type="password" name="LoginPassword">
+                <br />
+                <input type="submit" class="buttons" id="login" value="login" />
+            </main>
+        </div>
+        <div class="col-md-4">
+            <main>
+                <h2>Register</h2>
+                <br />
+                <label>Email</label>
+                <br />
+                <input id="RegisterEmail" name="RegisterEmail">
+                <br />
+                <label>Password</label>
+                <br />
+                <input id="RegisterPassword" type="password" name="RegisterPassword">
+                <br />
+                <label>Repeat password</label>
+                <br />
+                <input id="RegisterPassword2" type="password" name="RegisterPassword2">
+                <br />
+                <input type="submit" class="buttons" id="register" value="register" />
+            </main>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/Overview.js"></script>

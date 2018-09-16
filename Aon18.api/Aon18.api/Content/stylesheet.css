@@ -1,0 +1,86 @@
+﻿img {
+    width: 35%;
+    margin-left: 33%;
+}
+
+input {
+    display: inline-block;
+    min-width: 100%;
+}
+
+
+#mainContainer {
+    margin-top: 3%;
+}
+
+#skeletnaam, #md5 {
+    background-color: lightgray;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0px;
+}
+
+#wachtwoord {
+    width: 100%;
+    border-width: 3px;
+    border-color: black;
+}
+
+.buttons {
+    background-color: #58a018;
+    border-color: green;
+    color: white;
+    height: 50px;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.buttons:hover {
+    background-color: #1c7430;
+}
+
+.btn-file {
+    background-color: #58a018;
+    border-color: green;
+    color: white;
+    height: 50px;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.btn-file:hover {
+    background-color: #1c7430;
+    color: white;
+}
+
+.header-row {
+    background-color: #58a018;
+}
+
+th {
+    color: white;
+}
+
+.testdiv {
+    float: left;
+}
+
+table {
+    width: 58%;
+    float: left;
+}
+
+menu {
+    width: 38%;
+    float: left;
+}
+
+table {
+    width: 100%;
+    height: 300px;
+}
+

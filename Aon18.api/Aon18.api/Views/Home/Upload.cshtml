@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "UploadPage";
+}
+<img src="~/Content/images/pxl-logo.png" />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <main>
+                <form id="submitForm" method="post" enctype="multipart/form-data">
+                    <label>Naam Student:</label>
+                    <br />
+                    <input name="naam" type="text" id="naamStudent" />
+                    <br />
+                    <label>Studentennummer:</label>
+                    <br />
+                    <input type="text" id="studentNumber" />
+                    <br />
+                    <label>MD5-Hash:</label>
+                    <label id="md5">caf377284a7a6f62d94018cce438e290</label>
+                    <label class="btn btn-default btn-file">
+                        Selecteer Oplossing <input type="file" name="file" id="file" style="display: none;">
+                    </label>
+                    <br />
+                    <label class="btn btn-default btn-file">
+                        Upload<input class="buttons" type="submit" id="uploadButton" name="uploadButton" style="display: none;" />
+                    </label>
+                </form>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/Upload.js"></script>

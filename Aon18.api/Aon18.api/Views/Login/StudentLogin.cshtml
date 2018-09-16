@@ -1,0 +1,58 @@
+﻿@*@using Aon18.Controllers*@
+@{
+
+}
+
+<div class="container-fluid">
+    <img src="~/Content/images/pxl-logo.png" />
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <form method="post">
+                <main>
+                    <h2>Aanmelden</h2>
+                    <br />
+                    <label>Voornaam</label>
+                    <br />
+                    <input id="FirstName" name="voornaam">
+                    <br />
+                    <label>Naam</label>
+                    <br />
+                    <input id="Name" name="naam">
+                    <br />
+                    <label>Studentnummer</label>
+                    <br />
+                    <input id="StudentNumber" name="studentnummer">
+                    <br />
+                    <input id="postButton" class="buttons" type="submit" value="Sign in" />
+
+                </main>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#postButton').bind('click', PostData);
+        console.log('ttest');
+
+        function PostData() {
+            var student = {
+                Name: $('#Name').val(),
+                FirstName: $('#FirstName').val(),
+                StudentNumber: $('#StudentNumber').val()
+            }
+            console.log(student);
+            $.ajax(
+                {
+                    method: "POST",
+                    url: "http://localhost:49859/api/Student",
+                    data: JSON.stringify(student),
+                    contentType: "text/json"
+                }
+            );
+
+        }
+        console.log('ttest');
+    });
+</script>
